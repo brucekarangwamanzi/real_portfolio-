@@ -64,16 +64,20 @@ This creates a self-contained `exports/portfolio-preview.html` and `exports/bruc
 - `dist/script.js`: theme button, navigation and project details.
 - `tools/`: regression checks and offline export.
 
-## GitHub Pages
+## Live portfolio
 
-The site is published from the `main` branch's `docs/` folder. Its GitHub Pages URL is:
+https://karangwa-manzi-bruce-portfolio.peachywood4.chatgpt.site
 
-https://brucekarangwamanzi.github.io/real_portfolio-/
+The public portfolio is hosted with Sites. This GitHub repository stores its source code; pushing changes here does not automatically republish the Sites deployment.
 
-`dist/` is the source for the published page. After editing the portfolio, refresh the hosting files before committing and pushing:
+## Optional GitHub Pages hosting
+
+A GitHub Pages publication copy is also prepared in `docs/`. To host it with GitHub Pages instead, select **Settings → Pages → Deploy from a branch → main → /docs** in this repository.
+
+After editing `dist/`, refresh that copy with:
 
 ```sh
 python tools/prepare-pages.py
 ```
 
-Commit the updated `dist/` and generated `docs/` files together. GitHub Pages builds after the push. There is no backend or build dependency.
+Commit `dist/` and the generated `docs/` files together.
