@@ -64,4 +64,16 @@ This creates a self-contained `exports/portfolio-preview.html` and `exports/bruc
 - `dist/script.js`: theme button, navigation and project details.
 - `tools/`: regression checks and offline export.
 
-The website is a static frontend. Hosting and a public URL are configured separately.
+## GitHub Pages
+
+The site is published from the `main` branch's `docs/` folder. Its GitHub Pages URL is:
+
+https://brucekarangwamanzi.github.io/real_portfolio-/
+
+`dist/` is the source for the published page. After editing the portfolio, refresh the hosting files before committing and pushing:
+
+```sh
+python tools/prepare-pages.py
+```
+
+Commit the updated `dist/` and generated `docs/` files together. GitHub Pages builds after the push. There is no backend or build dependency.
